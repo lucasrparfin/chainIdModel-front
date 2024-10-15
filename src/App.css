@@ -1,0 +1,166 @@
+/* Estilos para o corpo da aplicação */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ecfb3e; /* Fundo amarelo vibrante */
+  color: #000; /* Texto preto */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-top: 60px; /* Cria espaço para o header fixo */
+}
+
+/* Estilo para os títulos */
+h1, h2, h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Estilo para labels */
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Estilo para inputs */
+input {
+  padding: 10px;
+  font-size: 1.1em;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 300px;
+}
+
+/* Estilo para botões */
+button {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9B51E0; /* Altera para roxo ao passar o mouse */
+}
+
+/* Estilo para mensagens abaixo de inputs */
+p {
+  font-size: 1.1em;
+  margin-top: 15px;
+  color: #000;
+  text-align: left; 
+}
+
+/* Estilo do header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  width: 100vw; /* Expande o header para 100% da largura da viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que o header fique sobre outros elementos */
+}
+
+/* Estilo das informações do usuário */
+.user-info {
+  font-size: 1.1em;
+  color: #fff; /* Texto branco */
+}
+
+/* Estilo dos links do menu de admin */
+.admin-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.admin-menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-menu a:hover {
+  background-color: #9B51E0;
+  color: #FFFFFF;
+}
+
+.admin-menu a.active-link {
+  background-color: #9B51E0;
+  color: #FFFFFF;
+}
+
+/* Estilo do botão de logout */
+.header button {
+  background-color: #fff; /* Fundo branco */
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #9B51E0;
+  color: #fff;
+}
+
+.header p {
+  color: #fff; /* Texto branco */
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+/* Estilo da tabela */
+.table th, .table td {
+  border: 1px solid #9B51E0;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap; /* Evita a quebra de linha */
+  width: auto; /* Ajusta a largura das colunas */
+}
+
+.table {
+  width: 80%; /* Aumenta o espaço da tabela */
+  margin: 0 auto; /* Centraliza a tabela */
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #9B51E0;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #fffacd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ecfb3e;
+}
