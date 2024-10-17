@@ -3,12 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { getUserInfoFromToken } from '../utils/authUtils';
 
 function AdminMenu() {
-    const { role } = getUserInfoFromToken();
-    const location = useLocation();
-
-  if (role !== 'admin') {
-    return null;
-  }
+  const { role } = getUserInfoFromToken();
+  const location = useLocation();
 
   return (
     <nav className="admin-menu">
@@ -23,12 +19,22 @@ function AdminMenu() {
         </li>
         <li>
           <Link 
-            to="/all-chainids" 
-            className={location.pathname === '/all-chainids' ? 'active-link' : ''}
+            to="/user-chainids" 
+            className={location.pathname === '/user-chainids' ? 'active-link' : ''}
           >
-            All ChainIDs
+            My ChainIDs
           </Link>
         </li>
+        {role === 'admin' && (
+          <li>
+            <Link 
+              to="/all-chainids" 
+              className={location.pathname === '/all-chainids' ? 'active-link' : ''}
+            >
+              All ChainIDs
+            </Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

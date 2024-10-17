@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import LoginPage from './pages/LoginPage';
 import ChainIDPage from './pages/ChainIDPage';
 import AllChainIDsPage from './pages/AllChainIDsPage';
+import UserChainIDsPage from "./pages/UserChainIDsPage";
 
 const isAuthenticated = () => {
   const token = localStorage.getItem('authToken');
@@ -42,6 +43,7 @@ function App() {
           path="/all-chainids" 
           element={auth && isAdmin() ? <AllChainIDsPage /> : <Navigate to="/login" />} 
         />
+        <Route path="/user-chainids" element={<UserChainIDsPage />} />
         <Route path="*" element={<Navigate to={auth ? "/chainid" : "/login"} />} />
       </Routes>
     </Router>
